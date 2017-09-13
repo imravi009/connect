@@ -16,9 +16,9 @@ app.use(bodyParser.json());
 
 // build mongo database connection url //
 var dbURL = 'mongodb://localhost/mydb';
-require('./api2/models/model'); //created model loading here
+require('./api/models/model'); //created model loading here
 
-require('./api2/routes_dir/routes')(app);
+require('./api/routes_dir/routes')(app);
 
 mongoose.connect(dbURL);
 mongoose.Promise = global.Promise;
